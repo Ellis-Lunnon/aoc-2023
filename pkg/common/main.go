@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func MustReadFile(day int) string {
@@ -15,7 +16,7 @@ func MustReadFile(day int) string {
 }
 
 func MustParseInt(val string) int {
-	out, err := strconv.Atoi(val)
+	out, err := strconv.Atoi(strings.TrimSpace(val))
 	if err != nil {
 		panic(err)
 	}

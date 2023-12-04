@@ -61,9 +61,7 @@ func FindLabels(mat *common.Mat[rune]) [][]int {
 			matches = append(matches, absMatch)
 		}
 	}
-
 	return matches
-
 }
 
 func Part1(mat common.Mat[rune]) int {

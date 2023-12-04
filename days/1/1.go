@@ -1,8 +1,8 @@
 package main
 
 import (
+	"aoc2023/pkg/common"
 	"log"
-	"os"
 	"strings"
 	"sync"
 )
@@ -87,8 +87,8 @@ func init() {
 }
 
 func main() {
-	input, _ := os.ReadFile("inputs/day1.txt")
-	lines := strings.Split(string(input), "\n")
+	input := common.MustReadFile(1)
+	lines := strings.Split(input, "\n")
 
 	log.Println("Part 1", Part1(lines))
 	log.Println("Part 2", Part2(lines))

@@ -57,9 +57,9 @@ func Part2(cards []string) int {
 			break
 		}
 		id := idx + 1
+		cardCounts[id]++
 		cnt := ParseCardWins(card)
 		// Increment by one to account for the original
-		cardCounts[id]++
 		numCopies := cardCounts[id]
 		for i := 0; i < cnt; i++ {
 			cardCounts[id+i+1] += numCopies
